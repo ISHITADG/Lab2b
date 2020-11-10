@@ -1,5 +1,9 @@
 #!/bin/bash
 
+apt install -y vim;
+apt install -y tmux;
+apt install -y net-tools;
+
 #installs mininet
 sudo apt-get update;
 git clone git://github.com/mininet/mininet;
