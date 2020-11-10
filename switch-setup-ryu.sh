@@ -7,11 +7,11 @@ env
 #Mininet creates a bridge by default using the switch name.
 #So we delete and re-create our own bridges in the next step   
 ovs-vsctl del-br s1
-ovs-vsctl del-br s2
+ovs-vsctl del-br OVS1
+ovs-vsctl del-vr OVS2
 
 #Create bridge OVS1 
 ovs-vsctl add-br OVS1
-ovs-vsctl add-br OVS2
 #Associate interface s1-eth2(server) to OVS1 
 ovs-vsctl add-port OVS1 s1-eth2 
 
@@ -21,8 +21,8 @@ ovs-vsctl add-br OVS2
 ovs-vsctl add-port OVS2 s1-eth1
 
 #Assign IP addresses to the interfaces of the respective bridges
-ifconfig OVS1 10.10.1.2/24 up
-ifconfig OVS2 10.10.2.1/24 up
+ifconfig OVS1 10.10.3.1/24 up
+ifconfig OVS2 10.10.1.2/24 up
 
 #Delete any previous flows
 ovs-ofctl del-flows OVS1
