@@ -1,8 +1,11 @@
 #!/bin/bash
 
+#helpful tools for assignment
 apt install -y vim;
 apt install -y tmux;
 apt install -y net-tools;
+apt install -y iperf3; 
+apt install -y traceroute;
 
 #installs mininet
 sudo apt-get update;
