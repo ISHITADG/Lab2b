@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #installs mininet
-sudo su;
 sudo apt-get update;
 git clone git://github.com/mininet/mininet;
 cd mininet; git tag latest; git checkout master; 
