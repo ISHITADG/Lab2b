@@ -5,7 +5,8 @@ sudo su;
 sudo apt-get update;
 git clone git://github.com/mininet/mininet;
 cd mininet; git tag latest; git checkout master; 
-bash mininet/util/install.sh; 
+bash util/install.sh; 
+cd ../;
 
 #installs ryu
 sudo apt-get update;
@@ -20,3 +21,4 @@ sudo pip install tinyrpc==0.9.4;
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/python2.7/dist-packages;
 export PATH=$PATH:/usr/local/lib/python2.7/dist-packages;
 sudo pip install six --upgrade;
+cd ..;
